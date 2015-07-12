@@ -76,9 +76,9 @@ namespace LOIC
             this.label16 = new System.Windows.Forms.Label();
             this.TTip = new System.Windows.Forms.ToolTip(this.components);
             this.label24 = new System.Windows.Forms.Label();
+            this.enableHive = new System.Windows.Forms.RadioButton();
             this.tShowStats = new System.Windows.Forms.Timer(this.components);
             this.disableHive = new System.Windows.Forms.RadioButton();
-            this.enableHive = new System.Windows.Forms.RadioButton();
             this.label25 = new System.Windows.Forms.Label();
             this.txtIRCserver = new System.Windows.Forms.TextBox();
             this.txtIRCport = new System.Windows.Forms.TextBox();
@@ -494,7 +494,7 @@ namespace LOIC
             this.lbFailed.TabIndex = 24;
             this.lbFailed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.TTip.SetToolTip(this.lbFailed, "How many times (in total) the webserver didn\'t respond. High number = server down" +
-                    ".");
+        ".");
             // 
             // lbRequested
             // 
@@ -619,11 +619,23 @@ namespace LOIC
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(22, 452);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(165, 14);
+            this.label24.Size = new System.Drawing.Size(150, 14);
             this.label24.TabIndex = 14;
-            this.label24.Text = "github.com/NewEraCracker/LOIC";
+            this.label24.Text = "github.com/codybaldwin/LOIC";
             this.TTip.SetToolTip(this.label24, "Go to official page");
             this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // enableHive
+            // 
+            this.enableHive.AutoSize = true;
+            this.enableHive.Location = new System.Drawing.Point(377, 15);
+            this.enableHive.Name = "enableHive";
+            this.enableHive.Size = new System.Drawing.Size(124, 18);
+            this.enableHive.TabIndex = 16;
+            this.enableHive.Text = "IRC Mode (HiveMind)";
+            this.TTip.SetToolTip(this.enableHive, "Fill the IRC options if you wish to use this mode");
+            this.enableHive.UseVisualStyleBackColor = true;
+            this.enableHive.CheckedChanged += new System.EventHandler(this.enableHive_CheckedChanged);
             // 
             // tShowStats
             // 
@@ -642,18 +654,6 @@ namespace LOIC
             this.disableHive.Text = "Manual Mode (Do it yourself)";
             this.disableHive.UseVisualStyleBackColor = true;
             this.disableHive.CheckedChanged += new System.EventHandler(this.disableHive_CheckedChanged);
-            // 
-            // enableHive
-            // 
-            this.enableHive.AutoSize = true;
-            this.enableHive.Location = new System.Drawing.Point(377, 15);
-            this.enableHive.Name = "enableHive";
-            this.enableHive.Size = new System.Drawing.Size(124, 18);
-            this.enableHive.TabIndex = 16;
-            this.enableHive.Text = "IRC Mode (HiveMind)";
-            this.TTip.SetToolTip(this.enableHive, "Fill the IRC options if you wish to use this mode");
-            this.enableHive.UseVisualStyleBackColor = true;
-            this.enableHive.CheckedChanged += new System.EventHandler(this.enableHive_CheckedChanged);
             // 
             // label25
             // 
